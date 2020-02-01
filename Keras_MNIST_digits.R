@@ -27,7 +27,10 @@ xtest <- x_test/255
 y_train <- to_categorical(y_train, 10)
 y_test <- to_categorical(y_test, 10)
 
-#DEFINING THE MODEL
+####################
+#DEFINING THE MODEL#
+####################
+
 #Sequential model, a linear stack of layers
 #Softmax activation function takes as input a vector K real numbers, and normalises it into probability distribution consisting of K probabilities
 model <- keras_model_sequential()
@@ -47,7 +50,10 @@ model %>% compile(
   metrics=c("accuracy")
 )
 
-#TRAINING & EVALUATION
+#######################
+#TRAINING & EVALUATION#
+#######################
+
 #Use fit() to train the model for 30 epochs suing batches of 128 images
 history <- model %>% fit(
   x_train, y_train,
